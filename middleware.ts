@@ -6,7 +6,7 @@ export async function middleware(request: NextRequest) {
 
   // 1. Block /admin and /api/cms in production deployments with a 404 Not Found
   if (process.env.NODE_ENV === 'production') {
-    if (pathname.startsWith('/admin') || pathname.startsWith('/api/cms')) {
+    if (pathname.startsWith('/admin')) {
       return NextResponse.rewrite(new URL('/_not-found', request.url));
     }
   }
