@@ -51,10 +51,10 @@ const jsonLd = {
   "@type": "Person",
   "name": "Sougata Chanda",
   "jobTitle": "Full-Stack Software Developer & Systems Architect",
-  "url": "https://sougata.dev",
+  "url": "https://sougata-dev-six.vercel.app/",
   "sameAs": [
-    "https://github.com",
-    "https://linkedin.com"
+    "https://github.com/sougatachanda",
+    "https://linkedin.com/sougatachanda"
   ],
   "knowsAbout": [
     "TypeScript", "Next.js", "React", "Node.js", "Python", "Rust", "PostgreSQL", "AWS", "Docker", "System Architecture"
