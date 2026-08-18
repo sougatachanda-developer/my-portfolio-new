@@ -120,24 +120,23 @@ export default function Certificates({
       {/* Certificate Lightbox Preview Modal */}
       {selectedCert && (
         <div className="fixed inset-0 z-50 bg-[#141313]/90 backdrop-blur-xl p-4 md:p-12 overflow-y-auto flex justify-center items-center">
-          <div className="bg-[#111111] border border-[#292929] max-w-3xl w-full p-8 md:p-12 relative my-auto shadow-2xl">
+          <div className="bg-[#111111] border border-[#292929] max-w-3xl w-full p-5 sm:p-8 md:p-12 relative my-auto shadow-2xl">
             
-            {/* Close Button */}
-            <button
-              onClick={() => setSelectedCert(null)}
-              className="absolute top-6 right-6 p-2 text-[#c4c7c7] hover:text-[#D8FF45] border border-[#292929] hover:border-[#D8FF45] transition-colors"
-            >
-              <X className="w-6 h-6" />
-            </button>
-
-            {/* Modal Content */}
-            <div className="flex items-center gap-3 mb-4">
-              <span className="font-mono text-xs text-[#D8FF45] uppercase bg-[#1c1b1b] px-3 py-1 border border-[#D8FF45]/30">
+            {/* Modal Header with Issuer Badge & Non-Overlapping Close Button */}
+            <div className="flex items-start justify-between gap-4 mb-4">
+              <span className="font-mono text-xs text-[#D8FF45] uppercase bg-[#1c1b1b] px-3 py-1 border border-[#D8FF45]/30 break-all">
                 {selectedCert.issuer} // {selectedCert.date}
               </span>
+              <button
+                onClick={() => setSelectedCert(null)}
+                className="p-2 text-[#c4c7c7] hover:text-[#D8FF45] border border-[#292929] hover:border-[#D8FF45] transition-colors shrink-0 cursor-pointer"
+                title="Close (Esc)"
+              >
+                <X className="w-5 h-5" />
+              </button>
             </div>
 
-            <h3 className="font-display font-extrabold text-2xl md:text-4xl text-[#e5e2e1] mb-2">
+            <h3 className="font-display font-extrabold text-xl sm:text-3xl md:text-4xl text-[#e5e2e1] mb-2 leading-tight">
               {selectedCert.title}
             </h3>
 
