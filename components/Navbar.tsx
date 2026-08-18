@@ -72,7 +72,7 @@ export default function Navbar({
       setTheme('light');
       document.documentElement.classList.add('light');
       document.documentElement.setAttribute('data-theme', 'light');
-    } else if (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    } else if (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       setTheme('light');
       document.documentElement.classList.add('light');
       document.documentElement.setAttribute('data-theme', 'light');
